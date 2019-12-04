@@ -1,13 +1,15 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Calculator {
     public static void main(String[] args) {
+        double num_1;
+        double num_2;
         System.out.println("Введите первое число");
-        Scanner scanner_1 = new Scanner(System.in);
-        double num_1 = scanner_1.nextDouble();
+        Scanner scanner = new Scanner(System.in);
+        scanner.useLocale(Locale.US);
+        num_1 = scanner.nextDouble();
         System.out.println("Веедите второе число");
-        Scanner scanner_2 = new Scanner(System.in);
-        double num_2 = scanner_2.nextDouble();
+        num_2 = scanner.nextDouble();
         double umn = num_1 * num_2;
         double del = num_1 / num_2;
         System.out.println("деление " + num_1 + " на " + num_2 + " равно " + del);
