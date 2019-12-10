@@ -16,6 +16,6 @@ public class Calculator {
         System.out.println("деление " + num_1 + " на " + num_2 + " равно " + del);
         System.out.println("умножение " + num_1 + " на " + num_2 + " равно " + umn);
         System.out.println("сумма " + num_1 + " и " + num_2 + " равна " + sum);
-        System.out.println("вычитание от" + num_1 + " " + num_2 + " равно " + minus);
+        System.out.println("вычитание от " + num_1 + " " + num_2 + " равно " + minus);
     }
 }
