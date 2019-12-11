@@ -2,22 +2,21 @@ import java.util.*;
 
 public class SimpleCalculator {
 
-
-    static Scanner scanner = new Scanner(System.in);
-
     public static void main(String[] args) {
-        int num1 = getInt();
-        int num2 = getInt();
+        double num1 = getInt();
+        double num2 = getInt();
         char operation = getOperation();
-        int result = calc(num1, num2, operation);
+        double result = calc(num1, num2, operation);
         System.out.println("Результат операции: " + result);
     }
 
-    public static int getInt() {
+    public static double getInt() {
         System.out.println("Введите число:");
-        int num;
-        if (scanner.hasNextInt()) {
-            num = scanner.nextInt();
+        Scanner scanner = new Scanner(System.in);
+        scanner.useLocale(Locale.US);
+        double num;
+        if (scanner.hasNextDouble()) {
+            num = scanner.nextDouble();
         } else {
             System.out.println("Вы допустили ошибку при вводе числа. Попробуйте еще раз.");
             scanner.next();//рекурсия
@@ -28,6 +27,8 @@ public class SimpleCalculator {
 
     public static char getOperation() {
         System.out.println("Введите операцию:");
+        Scanner scanner = new Scanner(System.in);
+        scanner.useLocale(Locale.US);
         char operation;
         if (scanner.hasNext()) {
             operation = scanner.next().charAt(0);
@@ -39,8 +40,8 @@ public class SimpleCalculator {
         return operation;
     }
 
-    public static int calc(int num1, int num2, char operation) {
-        int result;
+    public static double calc(double num1, double num2, char operation) {
+        double result;
         switch (operation) {
             case '+':
                 result = num1 + num2;
