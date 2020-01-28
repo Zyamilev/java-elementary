@@ -1,6 +1,15 @@
 package HomeWork7;
 
-public class Dog extends Pet {
+abstract class Dog extends Pet {
+    private boolean trained = true;
+
+    public boolean isTrained() {
+        return trained;
+    }
+
+    public void setTrained(boolean trained) {
+        this.trained = trained;
+    }
 
     Dog(String color, int age, int weight, int id, String name) {
         super(color, age, weight, id, name);
@@ -8,10 +17,14 @@ public class Dog extends Pet {
     }
 
     @Override
+    public void setColor(String color) {
+        super.setColor("Black");
+    }
+
+    @Override
     public void voice() {
         {
-            System.out.println(getColor() + " dog " + getAge() + " years old " + "weight" + " is " + getWeight()
-                    + " " + getName() + " said  Woof" + " " + getId());
+            System.out.println("Hello my name is " + getName() + " Wow");
         }
     }
 }
