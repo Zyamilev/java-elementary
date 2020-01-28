@@ -9,5 +9,6 @@ public class Giraffe extends Wild {
     @Override
     void voice() {
         super.voice();
+        System.out.println();
     }
 }

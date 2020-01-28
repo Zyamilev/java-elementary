@@ -24,7 +24,7 @@ abstract class Dog extends Pet {
     @Override
     public void voice() {
         {
-            System.out.println("Hello my name is " + getName() + " Wow");
+            System.out.println("Hello my name is " + getName() + " I can take you home");
         }
     }
 }
